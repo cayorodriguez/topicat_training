@@ -11,7 +11,7 @@ vars:
   version: "0.0.1"
   train: "topicat-train.json"
   dev: "topicat-dev.json"
-  config: "config.cfg"
+  config: "configbert.cfg"
 
 # These are the directories that the project needs. The project CLI will make
 # sure that they always exist.
@@ -21,8 +21,10 @@ directories: ["assets", "corpus", "configs", "training", "scripts", "packages"]
 # them with the project, so they won't have to be downloaded.
 assets:
   - dest: "assets/${vars.train}"
+    url: "https://github.com/TeMU-BSC/TopiCAT/releases/download/train1.0/topicat-train.json" 
     description: "Training data from topicat"
   - dest: "assets/${vars.dev}"
+    url: "https://github.com/TeMU-BSC/TopiCAT/releases/download/0.0.1dev/topicat-dev.json"
     description: "Development data from topicat"
 
 # Workflows are sequences of commands (see below) executed in order. You can
